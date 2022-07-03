@@ -6,21 +6,23 @@ import { useState } from "react";
 import Tasks from "./components/tasks/Tasks";
 
 function App() {
+  // !  Button ve Header JS propsları
   const [showAddTask, setShowAddTask] = useState(true);
-
   const toggleShow = () => setShowAddTask(!showAddTask);
-
+  // ? ==============================
+  // ! Add tasks propsları
   const addTask = (newTask) => {
     const id = Math.random().toString(36).substr(2, 9);
     const addNewTask = { id, ...newTask };
     setTask([...task, addNewTask]);
   };
-  const [task, setTask] = useState([]);
-
+  // ? ==============================
+  // ! Tasks propsları
+  const [task, setTask] = useState([]); // * inputdan gelen veriler için useState kullandım
   const deleteTask = (deletedTaskId) => {
-    setTask(task.filter((task) => task.id !== deletedTaskId));
+    setTask(task.filter((task) => task.id !== deletedTaskId)); // ? ilgili task'i silmek için id'yi filterladım
   };
-
+  // *
   const toggleDone = (toggleDoneId) => {
     setTask(
       task.map((task) =>
@@ -28,7 +30,7 @@ function App() {
       )
     );
   };
-
+  // ? ==============================
   return (
     <div className="App bg-light ">
       <Header toggleShow={toggleShow} showAddTask={showAddTask} />

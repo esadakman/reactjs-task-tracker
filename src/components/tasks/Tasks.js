@@ -1,6 +1,7 @@
 import "./Tasks.css";
 import { Button } from "reactstrap";
 const Tasks = ({ task, deleteTask, toggleDone, setTask }) => {
+  // ! Alert mesajı için bir fonksiyon yazdım
   function showAlert(type, message) {
     const alert = document.createElement("div");
     alert.className = `alert alert-${type}`;
@@ -11,10 +12,13 @@ const Tasks = ({ task, deleteTask, toggleDone, setTask }) => {
       alert.remove();
     }, 1000);
   }
+  // ? ==============================
+
   return (
     <section>
       <ul className="allTodos my-1 p-0">
         {task?.map((task) => {
+          // ! Taskden gelen verileri dest. yaptım
           const { text, tasks: date, isDone, id } = task;
           return (
             <li key={id} className={`task ${isDone ? "checked" : ""}`}>

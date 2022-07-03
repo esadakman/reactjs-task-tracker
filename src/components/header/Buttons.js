@@ -11,12 +11,3 @@ function Buttons({ toggleShow, text, color }) {
 }
 
 export default Buttons;
-
-// const [show, setShow] = useState(true);
-// console.log(show);
-// <button
-// className="btn btn-primary"
-// onClick={() => setShow((prevState) => !prevState)}>
-// {show ? "Show" : "Hide"}
-// </button>;
-// <button className="btn btn-dark" onClick={() => setShow(!show)}>Show</button>
