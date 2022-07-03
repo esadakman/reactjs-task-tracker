@@ -36,7 +36,7 @@ const AddTask = ({ addTask }) => {
             id="task"
             name="text"
             type="text"
-            placeholder="AddTask"
+            placeholder="Add Task"
             required
             value={text}
             onChange={(e) => setText(e.target.value)}

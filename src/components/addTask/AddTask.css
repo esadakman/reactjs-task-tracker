@@ -14,6 +14,7 @@ form {
 #day,
 #times {
     border-radius: 5rem !important;
+    cursor: text;
 }
 
 .btn-div {
@@ -24,3 +25,7 @@ form {
 .submit {
     width: 30%;
 }
+
+/* input {
+    background-color: red;
+} */

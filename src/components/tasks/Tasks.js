@@ -7,13 +7,10 @@ const Tasks = ({ task, deleteTask, toggleDone, setTask }) => {
     alert.textContent = message;
     const alertPlace = document.querySelector("ul");
     alertPlace.append(alert);
-    console.log(alert);
-    // console.log(document.querySelector("ul"));
     setTimeout(function () {
       alert.remove();
-    }, 5000);
+    }, 1000);
   }
-
   return (
     <section>
       <ul className="allTodos my-1 p-0">
