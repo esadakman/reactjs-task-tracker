@@ -30,22 +30,20 @@ function App() {
   };
 
   return (
-    <>
-      <div className="App bg-light ">
-        <Header toggleShow={toggleShow} showAddTask={showAddTask} />
-        {showAddTask && <AddTask addTask={addTask} />}
-        {task.length > 0 ? (
-          <Tasks
-            task={task}
-            deleteTask={deleteTask}
-            toggleDone={toggleDone}
-            setTask={setTask}
-          />
-        ) : (
-          <h2 className="mt-3 text-center">NO TASK TO SHOW</h2>
-        )}
-      </div>
-    </>
+    <div className="App bg-light ">
+      <Header toggleShow={toggleShow} showAddTask={showAddTask} />
+      {showAddTask && <AddTask addTask={addTask} />}
+      {task.length > 0 ? (
+        <Tasks
+          task={task}
+          deleteTask={deleteTask}
+          toggleDone={toggleDone}
+          setTask={setTask}
+        />
+      ) : (
+        <h2 className="mt-3 text-center">NO TASK TO SHOW</h2>
+      )}
+    </div>
   );
 }
 

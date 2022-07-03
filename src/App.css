@@ -8,7 +8,7 @@
 body {
   background-image: linear-gradient(to right, #0098f795, #f116129e);
   width: 100vw;
-  height: 100vh;
+  height: 100vh !important;
   display: flex;
   justify-content: center;
   margin-top: 3rem;
@@ -20,6 +20,7 @@ body {
   transition: all 1s linear ease-in-out;
   padding: 1rem;
   width: 32rem;
+
 }
 
 
@@ -30,7 +31,8 @@ body {
 @media screen and (max-width: 800px) {
   .App {
     width: 70vw;
-    min-width: 20rem;
+    min-width: 19rem;
+    height: auto !important;
   }
 
   .btn {
