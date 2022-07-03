@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 body {
@@ -14,4 +15,5 @@ body {
 
 .App {
   border-radius: 3rem;
+  transition: all 1s linear ease-in-out;
 }

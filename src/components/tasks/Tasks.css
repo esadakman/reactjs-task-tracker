@@ -1,0 +1,51 @@
+.allTodos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-remove {
+    color: red;
+}
+
+.fa {
+    cursor: pointer;
+    font-size: 1.5rem;
+
+}
+
+.fa:hover {
+    transform: scale(1.3);
+    transition: all .3s linear;
+}
+
+
+li {
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-bottom: .5rem;
+    padding: 0 1rem;
+    border: 1px solid red;
+}
+
+.text {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    margin-right: 1rem;
+
+}
+
+.texts-date {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
+
+
+.date-text {
+    color: rgb(102, 99, 99);
+}

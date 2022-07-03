@@ -3,6 +3,7 @@ import AddTask from "./components/addTask/AddTask";
 import Header from "./components/header/Header";
 import { Container } from "reactstrap";
 import { useState } from "react";
+import Tasks from "./components/tasks/Tasks";
 
 function App() {
   const [showAddTask, setShowAddTask] = useState(false);
@@ -17,10 +18,13 @@ function App() {
   const [task, setTask] = useState([]);
 
   return (
-    <Container className="App bg-light ">
-      <Header toggleShow={toggleShow} showAddTask={showAddTask} />
-      {showAddTask && <AddTask addTask={addTask} />}
-    </Container>
+    <>
+      <Container className="App bg-light ">
+        <Header toggleShow={toggleShow} showAddTask={showAddTask} />
+        {showAddTask && <AddTask addTask={addTask} />}
+        <Tasks task={task} />
+      </Container>
+    </>
   );
 }
 

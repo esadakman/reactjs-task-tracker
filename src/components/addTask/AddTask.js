@@ -10,19 +10,26 @@ const AddTask = ({ addTask }) => {
   // console.log(text);
   // console.log(time);
   // console.log(datetime);
-  const onSubmit = (e) => {
+  const submit = (e) => {
     e.preventDefault();
 
-    addTask({ tasks, isDone: false });
+    addTask({ text, tasks, isDone: false });
 
     setText("");
     setDatetime("");
     setTime("");
   };
-  // console.log(tasks);
+  // let session = " PM";
+  // let times = time + session;
+  // times.slice(0, 2) < 12 ? (session = "AM") : null;
+  // if (times.slice(0, 2) < 12) {
+  //   session = "AM";
+  // }
+
+  // console.log(addTask);
   return (
     <div className="AddTask">
-      <Form className="form" onSubmit={onSubmit}>
+      <Form className="form" onSubmit={submit}>
         <FormGroup>
           <Label htmlFor="task">Task</Label>
           <Input
@@ -61,9 +68,10 @@ const AddTask = ({ addTask }) => {
 
         <div className="btn-div">
           <Button
+            type="submit"
             color="primary"
             className="submit"
-            onClick={() => setTasks(`${text} ${datetime} ${time}`)}
+            onClick={() => setTasks(` ${datetime} ${time}`)}
           >
             Save Task
           </Button>
