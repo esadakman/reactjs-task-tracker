@@ -1,6 +1,6 @@
 import "./Tasks.css";
 import { Button } from "reactstrap";
-const Tasks = ({ task, deleteTask, toggleDone }) => {
+const Tasks = ({ task, deleteTask, toggleDone, setTask }) => {
   console.log(task);
   return (
     <section>
@@ -12,7 +12,7 @@ const Tasks = ({ task, deleteTask, toggleDone }) => {
               <div className="text ">
                 <i onClick={() => toggleDone(id)} className="fa fa-check"></i>
                 <div className="texts-date">
-                  <span>{text}</span>
+                  <span className="font-weight-bold">{text}</span>
                   <span className="date-text">{date}</span>
                 </div>
               </div>
@@ -21,7 +21,11 @@ const Tasks = ({ task, deleteTask, toggleDone }) => {
           );
         })}
       </ul>
-      <Button color="danger" className="delete my-2">
+      <Button
+        color="danger"
+        className="delete my-2"
+        onClick={() => setTask([])}
+      >
         Delete All Task
       </Button>
     </section>

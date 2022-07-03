@@ -1,7 +1,7 @@
 import "./App.css";
 import AddTask from "./components/addTask/AddTask";
 import Header from "./components/header/Header";
-import { Container } from "reactstrap";
+// import { Container } from "reactstrap";
 import { useState } from "react";
 import Tasks from "./components/tasks/Tasks";
 
@@ -31,11 +31,18 @@ function App() {
 
   return (
     <>
-      <Container className="App bg-light ">
+      <div className="App bg-light ">
         <Header toggleShow={toggleShow} showAddTask={showAddTask} />
         {showAddTask && <AddTask addTask={addTask} />}
-        <Tasks task={task} deleteTask={deleteTask} toggleDone={toggleDone} />
-      </Container>
+        {task.length > 0 ? (
+          <Tasks
+            task={task}
+            deleteTask={deleteTask}
+            toggleDone={toggleDone}
+            setTask={setTask}
+          />
+        ) : null}
+      </div>
     </>
   );
 }
