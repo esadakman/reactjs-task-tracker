@@ -3,6 +3,8 @@ section {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding-top: 1rem;
+
 }
 
 .allTodos {
@@ -11,37 +13,27 @@ section {
     justify-content: center;
     align-items: center;
     width: 100%;
-}
+    gap: 1rem;
 
-.fa-remove {
-    color: red;
 }
 
 
-.fa {
-    cursor: pointer;
-    font-size: 1.5rem;
-    padding: 0 1rem;
-    transition: all .3s linear;
-}
-
-.fa-check {
-    color: green;
-}
-
-.fa:hover {
-    transform: scale(1.3);
-}
+/* ! TASKS */
 
 li {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-top: .5rem;
+    /* margin-top: .5rem; */
     transition: all .3s linear;
-    border: 2px solid rgba(0, 0, 0, 0.604);
+    border: 2px solid rgba(0, 0, 0, 0.353);
+    background-color: #5bc0debb;
     border-radius: 2rem;
+    padding: 0 1rem;
+    transition: all .3s linear;
+
+
 }
 
 .text {
@@ -51,22 +43,56 @@ li {
     overflow: hidden;
 }
 
+.task-text {
+    font-weight: bolder !important;
+}
+
 .texts-date {
     display: flex;
     flex-direction: column;
     margin-left: 1rem;
 }
 
+/* ! TASK ISDONE TRUE */
 .checked span {
     text-decoration: line-through !important;
 }
 
 .checked .fa-check {
-    color: rgb(41, 39, 39);
+    color: green;
 }
 
 .checked {
-    background-color: rgb(126, 122, 122);
+
+    background-color: #d4edda;
+    /* color: rgb(84, 80, 80); */
     transition: all .3s linear;
-    border-color: white;
+    border-color: #5cb85c;
+}
+
+
+/* ! ICONS */
+
+.fa-remove {
+    color: rgba(255, 0, 0, 0.751);
+}
+
+
+.fa {
+    cursor: pointer;
+    font-size: 1.7rem;
+    padding: 0 1rem;
+    transition: all .3s linear;
+}
+
+.fa-check {
+    color: #0275d8;
+}
+
+.fa:hover {
+    transform: scale(1.3);
+}
+
+.alert {
+    padding: .5rem 2rem !important;
 }

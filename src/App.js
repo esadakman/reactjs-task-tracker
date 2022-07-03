@@ -41,7 +41,9 @@ function App() {
             toggleDone={toggleDone}
             setTask={setTask}
           />
-        ) : null}
+        ) : (
+          <h2 className="mt-3 text-center">NO TASK TO SHOW</h2>
+        )}
       </div>
     </>
   );
