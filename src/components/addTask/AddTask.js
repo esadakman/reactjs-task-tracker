@@ -1,21 +1,25 @@
-// import { useState } from "react";
-
 import "./AddTask.css";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import { useState } from "react";
 
-const AddTask = () => {
+const AddTask = ({ addTask }) => {
   const [text, setText] = useState("");
-  // const [day, setDay] = useState("");
   const [time, setTime] = useState("");
   const [datetime, setDatetime] = useState("");
+  const [tasks, setTasks] = useState("");
   // console.log(text);
   // console.log(time);
   // console.log(datetime);
   const onSubmit = (e) => {
     e.preventDefault();
-  };
 
+    addTask({ tasks, isDone: false });
+
+    setText("");
+    setDatetime("");
+    setTime("");
+  };
+  // console.log(tasks);
   return (
     <div className="AddTask">
       <Form className="form" onSubmit={onSubmit}>
@@ -32,9 +36,9 @@ const AddTask = () => {
           />
         </FormGroup>
         <FormGroup>
-          <label htmlFor="day">Day</label>
+          <Label htmlFor="day">Day</Label>
 
-          <input
+          <Input
             id="day"
             name="day"
             type="date"
@@ -44,8 +48,8 @@ const AddTask = () => {
           />
         </FormGroup>
         <FormGroup>
-          <label htmlFor="times">Time</label>
-          <input
+          <Label htmlFor="times">Time</Label>
+          <Input
             id="times"
             name="times"
             type="time"
@@ -54,26 +58,19 @@ const AddTask = () => {
             onChange={(e) => setTime(e.target.value)}
           />
         </FormGroup>
-        <Button>Submit</Button>
+
+        <div className="btn-div">
+          <Button
+            color="primary"
+            className="submit"
+            onClick={() => setTasks(`${text} ${datetime} ${time}`)}
+          >
+            Save Task
+          </Button>
+        </div>
       </Form>
     </div>
   );
 };
 
 export default AddTask;
-
-// import DatePicker from "react-date-picker";
-//         const [value, onChange] = useState(new Date());
-//         <DatePicker
-//           className="  bg-light rounded-5"
-//           onChange={onChange}
-//           value={value}
-//         />
-
-// <div>
-//   <DatePicker
-//     className="dP  bg-light rounded-5"
-//     onChange={onChange}
-//     value={value}
-//   />
-// </div>

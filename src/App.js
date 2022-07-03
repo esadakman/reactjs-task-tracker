@@ -6,12 +6,20 @@ import { useState } from "react";
 
 function App() {
   const [showAddTask, setShowAddTask] = useState(false);
+
   const toggleShow = () => setShowAddTask(!showAddTask);
 
+  const addTask = (newTask) => {
+    const id = Math.random().toString(36).substr(2, 9);
+    const addNewTask = { id, ...newTask };
+    setTask([...task, addNewTask]);
+  };
+  const [task, setTask] = useState([]);
+
   return (
-    <Container className="App  ">
+    <Container className="App bg-light ">
       <Header toggleShow={toggleShow} showAddTask={showAddTask} />
-      <AddTask />
+      {showAddTask && <AddTask addTask={addTask} />}
     </Container>
   );
 }

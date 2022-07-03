@@ -1,4 +1,31 @@
-.react-date-picker {
-    width: 15rem;
+.AddTask {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+/* .form-label {
+    width: 100%;
+} */
+form {
+    width: 100%;
+    border: 1px solid red;
+}
+
+#task,
+#day,
+#times {
+    border-radius: 5rem !important;
+}
+
+.btn-div {
     text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.submit {
+    width: 30%;
 }
