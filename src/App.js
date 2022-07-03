@@ -1,13 +1,18 @@
 import "./App.css";
+import AddTask from "./components/addTask/AddTask";
 import Header from "./components/header/Header";
-
-// import { useState } from "react";
+import { Container } from "reactstrap";
+import { useState } from "react";
 
 function App() {
+  const [showAddTask, setShowAddTask] = useState(false);
+  const toggleShow = () => setShowAddTask(!showAddTask);
+
   return (
-    <div className="App  ">
-      <Header />
-    </div>
+    <Container className="App  ">
+      <Header toggleShow={toggleShow} showAddTask={showAddTask} />
+      <AddTask />
+    </Container>
   );
 }
 

@@ -1,0 +1,17 @@
+.containers {
+    border: 5px solid red;
+    width: fit-content;
+    margin-top: 2rem;
+    padding: .5rem;
+
+}
+
+.btn {
+
+    transition: all .5s ease !important;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+}
+
