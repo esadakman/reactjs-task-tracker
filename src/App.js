@@ -17,12 +17,24 @@ function App() {
   };
   const [task, setTask] = useState([]);
 
+  const deleteTask = (deletedTaskId) => {
+    setTask(task.filter((task) => task.id !== deletedTaskId));
+  };
+
+  const toggleDone = (toggleDoneId) => {
+    setTask(
+      task.map((task) =>
+        task.id === toggleDoneId ? { ...task, isDone: !task.isDone } : task
+      )
+    );
+  };
+
   return (
     <>
       <Container className="App bg-light ">
         <Header toggleShow={toggleShow} showAddTask={showAddTask} />
         {showAddTask && <AddTask addTask={addTask} />}
-        <Tasks task={task} />
+        <Tasks task={task} deleteTask={deleteTask} toggleDone={toggleDone} />
       </Container>
     </>
   );

@@ -6,9 +6,6 @@
     width: auto;
 }
 
-/* .form-label {
-    width: 100%;
-} */
 form {
     width: 100%;
 }
@@ -22,7 +19,6 @@ form {
 .btn-div {
     text-align: center;
     width: 100%;
-    margin-bottom: 1rem;
 }
 
 .submit {

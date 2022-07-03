@@ -1,3 +1,9 @@
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .allTodos {
     display: flex;
     flex-direction: column;
@@ -9,32 +15,38 @@
     color: red;
 }
 
+
 .fa {
     cursor: pointer;
     font-size: 1.5rem;
+    padding: 0 1rem;
+    transition: all .3s linear;
+}
 
+.fa-check {
+    color: green;
 }
 
 .fa:hover {
     transform: scale(1.3);
-    transition: all .3s linear;
+
 }
 
-
 li {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    margin-bottom: .5rem;
-    padding: 0 1rem;
+    margin-top: .5rem;
     border: 1px solid red;
+    transition: all .3s linear;
 }
 
 .text {
     display: flex;
-    overflow: hidden;
     align-items: center;
     margin-right: 1rem;
+    overflow: hidden;
 
 }
 
@@ -42,10 +54,19 @@ li {
     display: flex;
     flex-direction: column;
     margin-left: 1rem;
+
 }
 
+.checked span {
+    text-decoration: line-through !important;
+    font-weight: normal;
+}
 
+.checked .fa-check {
+    color: black;
+}
 
-.date-text {
-    color: rgb(102, 99, 99);
+.checked {
+    background-color: gray;
+    transition: all .3s linear;
 }
