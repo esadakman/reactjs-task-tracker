@@ -16,13 +16,14 @@ function App() {
     const addNewTask = { id, ...newTask };
     setTask([...task, addNewTask]);
   };
-  // ? ==============================
   // ! Tasks propsları
-  const [task, setTask] = useState([]); // * inputdan gelen veriler için useState kullandım
+  // ? inputdan gelen veriler için useState kullandım
+  const [task, setTask] = useState([]);
+  // ? ilgili task'i silmek için id'yi filterladım
   const deleteTask = (deletedTaskId) => {
-    setTask(task.filter((task) => task.id !== deletedTaskId)); // ? ilgili task'i silmek için id'yi filterladım
+    setTask(task.filter((task) => task.id !== deletedTaskId));
   };
-  // *
+  // * isDone'ı tıklamayla değiştimek için toggleDone diye bir değişken oluturup task'ime ekledim ve !task.isDone diyerek her tıklamada değiştirttim
   const toggleDone = (toggleDoneId) => {
     setTask(
       task.map((task) =>
@@ -30,7 +31,6 @@ function App() {
       )
     );
   };
-  // ? ==============================
   return (
     <div className="App bg-light ">
       <Header toggleShow={toggleShow} showAddTask={showAddTask} />

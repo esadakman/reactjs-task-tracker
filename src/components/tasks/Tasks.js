@@ -24,6 +24,7 @@ const Tasks = ({ task, deleteTask, toggleDone, setTask }) => {
             <li key={id} className={`task ${isDone ? "checked" : ""}`}>
               <div className="text ">
                 <i
+                  // ? onClick'e toggle down'ı ekleyerek isDone verimi manipüle ettim
                   onClick={() =>
                     toggleDone(id) & showAlert("success", `${text} is done`)
                   }
