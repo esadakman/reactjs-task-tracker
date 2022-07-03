@@ -7,15 +7,15 @@
 
 body {
   background-image: linear-gradient(to right, #0098f795, #f116129e);
+  background-size: cover;
   width: 100vw;
-  height: 100vh !important;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
 }
 
 .App {
-  margin-top: 3rem;
+  margin-top: 2rem;
   border-radius: 3rem;
   transition: all 1s linear ease-in-out;
   padding: 1rem;
@@ -32,7 +32,7 @@ body {
   .App {
     width: 70vw;
     min-width: 19rem;
-    height: auto !important;
+    height: auto;
   }
 
   .btn {
