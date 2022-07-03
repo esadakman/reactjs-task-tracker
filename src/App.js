@@ -6,7 +6,7 @@ import { useState } from "react";
 import Tasks from "./components/tasks/Tasks";
 
 function App() {
-  const [showAddTask, setShowAddTask] = useState(false);
+  const [showAddTask, setShowAddTask] = useState(true);
 
   const toggleShow = () => setShowAddTask(!showAddTask);
 
