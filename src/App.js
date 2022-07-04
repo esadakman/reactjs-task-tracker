@@ -19,7 +19,7 @@ function App() {
   // ! Tasks propsları
   // ? inputdan gelen veriler için useState kullandım
   const [task, setTask] = useState([]);
-  // ? ilgili task'i silmek için id'yi filterladım
+  // ? ilgili task'i silmek için id'yi filterladım ve belirtilen id dışında kalan id'leri alarak gelen id'de ki task'i kaldırmış oldum
   const deleteTask = (deletedTaskId) => {
     setTask(task.filter((task) => task.id !== deletedTaskId));
   };
@@ -31,6 +31,7 @@ function App() {
       )
     );
   };
+
   return (
     <div className="App bg-light ">
       <Header toggleShow={toggleShow} showAddTask={showAddTask} />
