@@ -1,19 +1,34 @@
-# Project-003 : Task Tracker (RP-03)
+# Task Tracker
 
-## Description
+## Objective
 
-Project aims to create a Task Tracker App.
+Build a Task Tracker App using ReactJS.
+### Description
 
-## Problem Statement
+- Project aims to create a Task Tracker App.
 
-- We are adding a new project to our portfolios. So you and your colleagues have started to work on the project.
+- In this project i tried to make a build simple task tracker app. User can add new task to tracker list with date and time. And remove them from list after finish the task.
 
-## Project Skeleton
+
+### Built With
+
+- HTML
+
+- CSS
+
+- JS
+
+- ReactJS
+
+- Reactstrap
+
+
+### Project Skeleton
 
 ```
-003 - Task Tracker (folder)
+task-tracker-react (folder)
 |
-|----readme.md         # Given to the students (Definition of the project)
+|----readme.md
 SOLUTION
 ├── public
 │     └── index.html
@@ -36,24 +51,24 @@ SOLUTION
 └── yarn.lock
 ```
 
-## Objective
+## Installation
 
-Build a Task Tracker App using ReactJS.
+To run this project, install it locally using npm or yarn:
 
-### At the end of the project, following topics are to be covered;
+```
+$ git clone https://github.com/esadakman/task-tracker-react.git
+$ cd ../task-tracker-react
+$ npm install / yarn
+$ npm start / yarn start
+```
 
-- HTML
 
-- CSS
 
-- JS
+## Project Link
 
-- ReactJS
+[Task Tracker](https://task-masterr.netlify.app/)
 
-### At the end of the project, students will be able to;
+ 
+## Preview of the Project 
 
-- improve coding skills within HTML & CSS & JS & ReactJS.
-
-- use git commands (push, pull, commit, add etc.) and Github as Version Control System.
-
-## [Link !](https://task-masterr.netlify.app/)
+![tass](https://user-images.githubusercontent.com/98649983/178139721-7af5cb23-07e3-4b42-bb3b-e099bfee768c.gif)
