@@ -4,14 +4,14 @@
 
 Build a Task Tracker App using ReactJS.
 
-### Description
+## Description
 
 - Project aims to create a Task Tracker App.
 
 - In this project i tried to make a build simple task tracker app. User can add new task to tracker list with date and time. And remove them from list after finish the task.
 
 
-### Project Link
+## Project Link
 
 [Task Tracker](https://task-masterr.netlify.app/)
 
@@ -57,7 +57,7 @@ SOLUTION
 └── yarn.lock
 ```
 
-## Installation
+### Installation
 
 To run this project, install it locally using npm or yarn:
 
@@ -69,6 +69,6 @@ $ npm start / yarn start
 ```
 
  
-## Preview of the Project 
+### Preview of the Project 
 
 ![tass](https://user-images.githubusercontent.com/98649983/178139721-7af5cb23-07e3-4b42-bb3b-e099bfee768c.gif)
